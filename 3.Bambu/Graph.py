@@ -1,13 +1,20 @@
 import pandas as pd
-from matplotlib import pyplot as plt
-import csv
+import matplotlib.pyplot as plt
 
-str_fileName = '1.Margarida/data/data.csv'
+# Read the CSV file into a Pandas DataFrame
+df = pd.read_csv('3.Bambu/train.csv')
 
-fh = open(str_fileName)
-csv_reader = csv.reader(fh)
+# Extract the data for the x and y axes
+x = df['date']
+y = df['temperature']
 
-csv_header = next(csv_reader)
-csv_header
+# Create the graph
+plt.bar(x, y)
 
-['id', 'light', 'soil_humidity', 'air_humidity', 'temperature']
+# Add labels and title to the graph
+plt.xlabel('Date')
+plt.ylabel('Y Label')
+plt.title('Bar Graph Title')
+
+# Show the graph
+plt.show()
