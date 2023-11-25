@@ -1,2 +1,0 @@
-#hola mundo
-#Biel putero
