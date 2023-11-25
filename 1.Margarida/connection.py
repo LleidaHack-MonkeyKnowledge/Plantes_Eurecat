@@ -31,10 +31,3 @@ def run():
     client = connect_mqtt()
     client.subscribe(topic)
     client.loop_forever()
-
-
-#______________
-#   MAIN
-#______________
-
-run()
