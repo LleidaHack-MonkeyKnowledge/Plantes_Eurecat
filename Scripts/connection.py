@@ -1,4 +1,5 @@
 from paho.mqtt import client as mqtt
+import saveToCsv as save
 
 broker = '84.88.76.18'
 port = 1883
@@ -14,8 +15,7 @@ def on_connect(client, userdata, flags, rc):
         print("Failed to connect, return code %d\n", rc)
 
 def on_message(client, userdata, msg):
-    print("bieen")
-    print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic")
+    save.MessageToCsv(msg.payload.decode())
 
 def connect_mqtt():
     # Set Connecting Client ID
