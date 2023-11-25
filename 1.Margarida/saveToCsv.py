@@ -8,8 +8,9 @@ writer = None
 
 def MessageToCsv(msg: str):
     # Converting JSON data to a pandas DataFrame
-    df = pd.json_normalize(json.loads(msg))
-    
+    #df = pd.json_normalize(json.loads(msg))
+    #csvtest = df.to_csv()
+    writer.writerow(json.loads(msg))
     # Writing DataFrame to a CSV file
     #df.to_csv("1.Margarida/data.csv", index=False)
 

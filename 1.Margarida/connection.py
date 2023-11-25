@@ -15,6 +15,7 @@ def on_connect(client, userdata, flags, rc):
         print("Failed to connect, return code %d\n", rc)
 
 def on_message(client, userdata, msg):
+    print(msg.payload.decode())
     save.MessageToCsv(msg.payload.decode())
 
 def connect_mqtt():
