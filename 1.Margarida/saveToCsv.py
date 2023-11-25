@@ -21,7 +21,7 @@ def MessageToCsv(msg):
     line += str(msg["air_humidity"])
     line += ","
     line += str(msg["temperature"])
-    line += ",\n"
+    line += "\n"
 
     # Write into CSV
     csvfile.write(line)
